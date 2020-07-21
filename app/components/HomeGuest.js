@@ -1,7 +1,12 @@
 import React from 'react';
 import Page from './layout/Page';
+import Axios from 'axios';
 
 function HomeGuest() {
+  const handleSubmit = e => {
+    e.preventDefault();
+    alert('register');
+  };
   return (
     <Page title='欢迎' wide={true}>
       <div className='row align-items-center'>
@@ -15,7 +20,7 @@ function HomeGuest() {
           </p>
         </div>
         <div className='col-lg-5 pl-lg-5 pb-3 py-lg-5'>
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className='form-group'>
               <label htmlFor='username-register' className='text-muted mb-1'>
                 <small>Username</small>
